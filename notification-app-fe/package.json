@@ -1,6 +1,6 @@
 {
   "name": "notification-app-fe",
-  "description": "Campus evaluation",
+  "description": "notification app frontend",
   "private": true,
   "version": "0.0.0",
   "type": "module",
