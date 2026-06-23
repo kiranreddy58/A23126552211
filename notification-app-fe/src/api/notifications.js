@@ -1,6 +1,6 @@
 import Log, { getOrFetchToken } from "../../../logging/logger.js";
 
-const BASE = "http://4.224.186.213/evaluation-service";
+const BASE = "/evaluation-service";
 
 export async function fetchNotifications({ page = 1, limit = 10, type = "All" }) {
   try {

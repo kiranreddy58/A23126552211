@@ -1,5 +1,7 @@
-const AUTH_URL = "http://4.224.186.213/evaluation-service/auth";
-const LOG_URL = "http://4.224.186.213/evaluation-service/logs";
+const IS_BROWSER = typeof window !== "undefined";
+const HOST = IS_BROWSER ? "" : "http://4.224.186.213";
+const AUTH_URL = HOST + "/evaluation-service/auth";
+const LOG_URL = HOST + "/evaluation-service/logs";
 
 const STACKS = new Set(["backend", "frontend"]);
 const LEVELS = new Set(["debug", "info", "warn", "error", "fatal"]);
