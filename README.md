@@ -35,3 +35,7 @@ This project is a full-stack campus notification system.
 ![Priority Inbox Output](./screenshorts/backend%20check%20for%20priority%20check%20for%20notification.png)
 ![Priority Inbox Sorted Console](./screenshorts/output.png)
 ![Priority Inbox Page Output](./screenshorts/output%20(2).png)
+
+### Responsive Design and Mobile View
+![Responsive Design and Mobile View](./screenshorts/reponsive%20degin%20and%20mobile%20view%20of%20the%20project.png)
+
