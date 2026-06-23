@@ -57,7 +57,7 @@ export function NotificationCard({ notification, isRead, onToggleRead }) {
           {cfg.icon}
         </Box>
         <Box sx={{ flexGrow: 1 }}>
-          <Box display="flex" alignItems="center" gap={1} flexWrap="wrap" mb={0.5}>
+          <Box sx={{ display: "flex", alignItems: "center", gap: 1, flexWrap: "wrap", mb: 0.5 }}>
             <Chip label={cfg.label} size="small" sx={{
               height: 20, fontSize: "0.75rem", fontWeight: 600,
               color: cfg.color, backgroundColor: cfg.bg, border: `1px solid ${cfg.color}22`

@@ -40,7 +40,7 @@ export default function App() {
         <AppBar position="sticky" elevation={1}>
           <Container maxWidth="md">
             <Toolbar disableGutters sx={{ justifyContent: "space-between" }}>
-              <Box display="flex" alignItems="center" gap={1}>
+              <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
                 <NotificationsIcon />
                 <Typography variant="h6" fontWeight={700}>Campus Notifications</Typography>
               </Box>

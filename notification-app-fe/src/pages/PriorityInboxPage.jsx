@@ -50,7 +50,7 @@ export function PriorityInboxPage({ readIds, onToggleRead }) {
 
   return (
     <Box sx={{ maxWidth: 720, mx: "auto", px: 2, py: 2 }}>
-      <Stack direction="row" alignItems="center" spacing={1.5} mb={2.5}>
+      <Stack sx={{ flexDirection: "row", alignItems: "center", gap: 1.5, mb: 2.5 }}>
         <Badge badgeContent={sorted.length} color="error" max={99}>
           <StarIcon sx={{ fontSize: 28, color: "#ffb300" }} />
         </Badge>
@@ -61,7 +61,7 @@ export function PriorityInboxPage({ readIds, onToggleRead }) {
         Top unread notifications by urgency (Placement &gt; Result &gt; Event) and recency.
       </Typography>
 
-      <Stack direction={{ xs: "column", sm: "row" }} spacing={2} alignItems={{ xs: "stretch", sm: "center" }} mb={3}>
+      <Stack sx={{ flexDirection: { xs: "column", sm: "row" }, gap: 2, alignItems: { xs: "stretch", sm: "center" }, mb: 3 }}>
         <Box sx={{ flexGrow: 1 }}><NotificationFilter value={filter} onChange={(f) => setFilter(f)} /></Box>
         <FormControl size="small" sx={{ minWidth: 140 }}>
           <InputLabel>Show Top N</InputLabel>
@@ -76,7 +76,7 @@ export function PriorityInboxPage({ readIds, onToggleRead }) {
 
       <Divider sx={{ mb: 3 }} />
 
-      {loading && <Box display="flex" justifyContent="center" py={6}><CircularProgress /></Box>}
+      {loading && <Box sx={{ display: "flex", justifyContent: "center", py: 6 }}><CircularProgress /></Box>}
       {!loading && error && <Alert severity="error" sx={{ borderRadius: "8px" }}>Failed to load: {error}</Alert>}
 
       {!loading && !error && shown.length === 0 && (

@@ -28,7 +28,7 @@ export function NotificationsPage({ readIds, onToggleRead }) {
 
   return (
     <Box sx={{ maxWidth: 720, mx: "auto", px: 2, py: 2 }}>
-      <Stack direction="row" alignItems="center" spacing={1.5} mb={2.5}>
+      <Stack sx={{ flexDirection: "row", alignItems: "center", gap: 1.5, mb: 2.5 }}>
         <Badge badgeContent={unread} color="error" max={99}>
           <NotificationsIcon sx={{ fontSize: 28, color: "primary.main" }} />
         </Badge>
@@ -42,7 +42,7 @@ export function NotificationsPage({ readIds, onToggleRead }) {
       <Box mb={3}><NotificationFilter value={filter} onChange={changeFilter} /></Box>
       <Divider sx={{ mb: 3 }} />
 
-      {loading && <Box display="flex" justifyContent="center" py={6}><CircularProgress /></Box>}
+      {loading && <Box sx={{ display: "flex", justifyContent: "center", py: 6 }}><CircularProgress /></Box>}
 
       {!loading && error && <Alert severity="error" sx={{ borderRadius: "8px" }}>Failed to load: {error}</Alert>}
 
@@ -61,7 +61,7 @@ export function NotificationsPage({ readIds, onToggleRead }) {
       )}
 
       {!loading && !error && totalPages > 1 && (
-        <Box display="flex" justifyContent="center" mt={4}>
+        <Box sx={{ display: "flex", justifyContent: "center", mt: 4 }}>
           <Pagination count={totalPages} page={page} onChange={changePage} color="primary" shape="rounded" />
         </Box>
       )}
