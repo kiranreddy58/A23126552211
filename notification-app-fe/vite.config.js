@@ -9,7 +9,7 @@ export default defineConfig({
     strictPort: true,
     proxy: {
       '/evaluation-service': {
-        target: 'http://4.224.186.213',
+        target: 'http://localhost:5000',
         changeOrigin: true
       }
     }
